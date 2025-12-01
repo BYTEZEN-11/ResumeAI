@@ -1,0 +1,54 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Run migrations
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "⚠️  No DATABASE_URL secret configured, skipping migrations."
+            exit 0
+          fi
+          export DIRECT_URL="${DIRECT_URL:-$DATABASE_URL}"
+          npx prisma migrate deploy
+
+      - name: Check Vercel secrets
+        id: vercel_check
+        run: |
+          if [ -n "${{ secrets.VERCEL_TOKEN }}" ]; then
+            echo "has_vercel=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_vercel=false" >> $GITHUB_OUTPUT
+            echo "⚠️  VERCEL_TOKEN secret not configured. Skipping Vercel deploy."
+            echo "    Add VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID secrets to enable auto-deploy."
+          fi
+
+      - name: Deploy to Vercel
+        if: steps.vercel_check.outputs.has_vercel == 'true'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"

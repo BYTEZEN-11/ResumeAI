@@ -1,0 +1,549 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+enum UserRole {
+  USER
+  PRO
+  TEAM_MEMBER
+  TEAM_ADMIN
+  ADMIN
+  SUPER_ADMIN
+}
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELED
+  PAST_DUE
+  TRIALING
+  INCOMPLETE
+  UNPAID
+}
+enum SubscriptionPlan {
+  FREE
+  PRO
+  TEAM
+}
+enum AnalysisStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+enum NotificationType {
+  ANALYSIS_COMPLETE
+  ANALYSIS_FAILED
+  SUBSCRIPTION_UPDATED
+  TEAM_INVITE
+  SYSTEM
+}
+enum FileType {
+  PDF
+  DOCX
+}
+enum AuditAction {
+  CREATE
+  READ
+  UPDATE
+  DELETE
+  LOGIN
+  LOGOUT
+  UPLOAD
+  ANALYZE
+  EXPORT
+  ADMIN_ACTION
+}
+model User {
+  id            String    @id @default(cuid())
+  email         String
+  emailNormalized String  @unique
+  emailVerified DateTime?
+  name          String?
+  image         String?
+  passwordHash  String?
+  role          UserRole  @default(USER)
+  isActive      Boolean   @default(true)
+  isBanned      Boolean   @default(false)
+  bannedAt      DateTime?
+  bannedReason  String?
+  lastLoginAt        DateTime?
+  tokenInvalidatedAt DateTime?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  deletedAt          DateTime?
+  accounts Account[]
+  sessions Session[]
+  profile          Profile?
+  resumes          Resume[]
+  jobDescriptions  JobDescription[]
+  analyses         ResumeAnalysis[]
+  coverLetters     CoverLetter[]
+  notifications    Notification[]
+  subscription     Subscription?
+  payments         Payment[]
+  auditLogs        AuditLog[]
+  apiKeys          ApiKey[]
+  teamMemberships  TeamMember[]
+  ownedTeams       Team[]            @relation("TeamOwner")
+  webhooks         Webhook[]
+  referralsSent    Referral[]        @relation("ReferralsSent")
+  referralReceived Referral?         @relation("ReferralsReceived")
+  @@index([email])
+  @@index([emailNormalized])
+  @@index([role])
+  @@index([createdAt])
+  @@map("users")
+}
+model Profile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  bio         String?
+  jobTitle    String?
+  company     String?
+  location    String?
+  website     String?
+  linkedinUrl String?
+  githubUrl   String?
+  avatarUrl   String?
+  timezone    String   @default("UTC")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@map("profiles")
+}
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+  @@map("accounts")
+}
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@map("sessions")
+}
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+model Resume {
+  id          String    @id @default(cuid())
+  userId      String
+  title       String
+  description String?
+  fileUrl     String
+  fileName    String
+  fileSize    Int
+  fileType    FileType
+  storagePath String
+  version     Int       @default(1)
+  isActive    Boolean   @default(true)
+  tags        String[]  @default([])
+  extractedText String?
+  extractedAt   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  files     ResumeFile[]
+  analyses  ResumeAnalysis[]
+  coverLetters CoverLetter[]
+  @@index([userId])
+  @@index([userId, isActive])
+  @@index([createdAt])
+  @@map("resumes")
+}
+model ResumeFile {
+  id          String   @id @default(cuid())
+  resumeId    String
+  fileUrl     String
+  fileName    String
+  fileSize    Int
+  fileType    FileType
+  storagePath String
+  version     Int
+  isActive    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  resume Resume @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  @@index([resumeId])
+  @@map("resume_files")
+}
+model JobDescription {
+  id          String    @id @default(cuid())
+  userId      String
+  title       String
+  company     String?
+  description String
+  url         String?
+  tags        String[]  @default([])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+  user     User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  analyses ResumeAnalysis[]
+  coverLetters CoverLetter[]
+  @@index([userId])
+  @@index([createdAt])
+  @@map("job_descriptions")
+}
+model ResumeAnalysis {
+  id               String         @id @default(cuid())
+  userId           String
+  resumeId         String
+  jobDescriptionId String
+  status           AnalysisStatus @default(PENDING)
+  jobTitle         String?
+  company          String?
+  atsScore         Int?
+  resumeScore      Int?
+  skillMatchPct    Float?
+  processingTime   Int?
+  error            String?
+  inngestJobId     String?
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  completedAt      DateTime?
+  deletedAt        DateTime?
+  user           User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resume         Resume         @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  jobDescription JobDescription @relation(fields: [jobDescriptionId], references: [id], onDelete: Cascade)
+  atsBreakdown     ATSBreakdown?
+  matchedSkills    MatchedSkill[]
+  missingSkills    MissingSkill[]
+  recommendations  Recommendation[]
+  interviewQuestions InterviewQuestion[]
+  rewriteSuggestions RewriteSuggestion[]
+  careerRecommendations CareerRecommendation[]
+  @@index([userId])
+  @@index([resumeId])
+  @@index([jobDescriptionId])
+  @@index([status])
+  @@index([createdAt])
+  @@index([userId, status, createdAt])
+  @@map("resume_analyses")
+}
+model ATSBreakdown {
+  id              String @id @default(cuid())
+  analysisId      String @unique
+  keywordScore    Int
+  formattingScore Int
+  sectionsScore   Int
+  readabilityScore Int
+  experienceScore Int
+  overallScore    Int
+  keywordDetails  Json?
+  details         Json?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@map("ats_breakdowns")
+}
+model MatchedSkill {
+  id          String @id @default(cuid())
+  analysisId  String
+  skill       String
+  category    String?
+  proficiency String?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@index([analysisId])
+  @@map("matched_skills")
+}
+model MissingSkill {
+  id          String @id @default(cuid())
+  analysisId  String
+  skill       String
+  category    String?
+  importance  String
+  reason      String?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@index([analysisId])
+  @@map("missing_skills")
+}
+model Recommendation {
+  id          String @id @default(cuid())
+  analysisId  String
+  section     String
+  type        String
+  priority    String
+  title       String
+  description String
+  example     String?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@index([analysisId])
+  @@map("recommendations")
+}
+model InterviewQuestion {
+  id          String @id @default(cuid())
+  analysisId  String
+  question    String
+  category    String
+  difficulty  String
+  hint        String?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@index([analysisId])
+  @@map("interview_questions")
+}
+model RewriteSuggestion {
+  id          String @id @default(cuid())
+  analysisId  String
+  section     String
+  original    String
+  rewritten   String
+  explanation String?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@index([analysisId])
+  @@map("rewrite_suggestions")
+}
+model CareerRecommendation {
+  id          String @id @default(cuid())
+  analysisId  String
+  title       String
+  description String
+  skillsToAdd String[]
+  timeline    String?
+  analysis ResumeAnalysis @relation(fields: [analysisId], references: [id], onDelete: Cascade)
+  @@index([analysisId])
+  @@map("career_recommendations")
+}
+model CoverLetter {
+  id               String   @id @default(cuid())
+  userId           String
+  resumeId         String
+  jobDescriptionId String
+  tone             String
+  customNote       String?
+  body             String
+  wordCount        Int
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  deletedAt        DateTime?
+  user           User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  resume         Resume         @relation(fields: [resumeId], references: [id], onDelete: Cascade)
+  jobDescription JobDescription @relation(fields: [jobDescriptionId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@index([userId, createdAt])
+  @@index([resumeId])
+  @@index([jobDescriptionId])
+  @@map("cover_letters")
+}
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType
+  title     String
+  message   String
+  metadata  Json?
+  isRead    Boolean          @default(false)
+  readAt    DateTime?
+  createdAt DateTime         @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@index([userId, isRead])
+  @@index([createdAt])
+  @@map("notifications")
+}
+model Subscription {
+  id                   String             @id @default(cuid())
+  userId               String             @unique
+  stripeCustomerId     String?            @unique
+  stripeSubscriptionId String?            @unique
+  stripePriceId        String?
+  plan                 SubscriptionPlan   @default(FREE)
+  status               SubscriptionStatus @default(ACTIVE)
+  currentPeriodStart   DateTime?
+  currentPeriodEnd     DateTime?
+  cancelAtPeriodEnd    Boolean            @default(false)
+  trialEnd             DateTime?
+  analysesUsed         Int                @default(0)
+  analysesLimit        Int                @default(3)
+  coverLettersUsed     Int                @default(0)
+  coverLettersLimit    Int                @default(3)
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([stripeCustomerId])
+  @@index([stripeSubscriptionId])
+  @@map("subscriptions")
+}
+model Payment {
+  id                    String   @id @default(cuid())
+  userId                String
+  stripePaymentIntentId String   @unique
+  stripeInvoiceId       String?
+  amount                Int
+  currency              String   @default("usd")
+  status                String
+  description           String?
+  metadata              Json?
+  createdAt             DateTime @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@index([createdAt])
+  @@map("payments")
+}
+model Team {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  ownerId   String
+  avatarUrl String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  owner   User         @relation("TeamOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  members TeamMember[]
+  @@index([ownerId])
+  @@map("teams")
+}
+model TeamMember {
+  id        String   @id @default(cuid())
+  teamId    String
+  userId    String
+  role      UserRole @default(TEAM_MEMBER)
+  invitedBy String?
+  joinedAt  DateTime @default(now())
+  team Team @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([teamId, userId])
+  @@index([teamId])
+  @@index([userId])
+  @@map("team_members")
+}
+model AuditLog {
+  id         String      @id @default(cuid())
+  userId     String?
+  action     AuditAction
+  resource   String
+  resourceId String?
+  metadata   Json?
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime    @default(now())
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  @@index([userId])
+  @@index([action])
+  @@index([resource])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
+model ApiKey {
+  id          String    @id @default(cuid())
+  userId      String
+  name        String
+  keyHash     String    @unique
+  prefix      String
+  permissions String[]  @default([])
+  lastUsedAt  DateTime?
+  expiresAt   DateTime?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@index([userId])
+  @@index([keyHash])
+  @@map("api_keys")
+}
+model FeatureFlag {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  name        String
+  description String?
+  isEnabled   Boolean  @default(false)
+  rolloutPct  Int      @default(0)
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  @@index([key])
+  @@map("feature_flags")
+}
+enum WebhookEvent {
+  ANALYSIS_COMPLETE
+  ANALYSIS_FAILED
+  SUBSCRIPTION_UPDATED
+}
+model Webhook {
+  id          String    @id @default(cuid())
+  userId      String
+  name        String
+  url         String
+  secret      String
+  events      WebhookEvent[]
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  lastFiredAt DateTime?
+  failCount   Int       @default(0)
+  user         User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  deliveries   WebhookDelivery[]
+  @@index([userId])
+  @@map("webhooks")
+}
+model WebhookDelivery {
+  id           String   @id @default(cuid())
+  webhookId    String
+  event        WebhookEvent
+  payload      Json
+  statusCode   Int?
+  responseBody String?
+  success      Boolean  @default(false)
+  attemptedAt  DateTime @default(now())
+  duration     Int?
+  retryCount   Int      @default(0)
+  nextRetryAt  DateTime?
+  webhook Webhook @relation(fields: [webhookId], references: [id], onDelete: Cascade)
+  @@index([webhookId])
+  @@index([attemptedAt])
+  @@index([nextRetryAt])
+  @@map("webhook_deliveries")
+}
+model StripeEvent {
+  id          String   @id
+  type        String
+  receivedAt  DateTime @default(now())
+  processedAt DateTime?
+  status      String   @default("pending")
+  error       String?
+  @@index([type])
+  @@index([receivedAt])
+  @@map("stripe_events")
+}
+model Referral {
+  id              String    @id @default(cuid())
+  referrerId      String
+  referredId      String?   @unique
+  code            String    @unique
+  email           String?
+  status          ReferralStatus @default(PENDING)
+  referrerBonus   Int       @default(0)
+  referredBonus   Int       @default(0)
+  createdAt       DateTime  @default(now())
+  convertedAt     DateTime?
+  referrer  User  @relation("ReferralsSent",     fields: [referrerId], references: [id], onDelete: Cascade)
+  referred  User? @relation("ReferralsReceived", fields: [referredId],  references: [id], onDelete: SetNull)
+  @@index([referrerId])
+  @@index([code])
+  @@map("referrals")
+}
+enum ReferralStatus {
+  PENDING
+  CONVERTED
+  REWARDED
+}
