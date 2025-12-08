@@ -11,3 +11,4 @@ Tracked progress and implementation history.
 - **[2025-12-05]** add navbar component
 - **[2025-12-06]** update navbar style
 - **[2025-12-07]** update package dependencies
+- **[2025-12-08]** add resume model
