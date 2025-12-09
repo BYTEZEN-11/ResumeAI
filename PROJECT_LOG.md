@@ -12,3 +12,4 @@ Tracked progress and implementation history.
 - **[2025-12-06]** update navbar style
 - **[2025-12-07]** update package dependencies
 - **[2025-12-08]** add resume model
+- **[2025-12-09]** add hero section
