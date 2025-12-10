@@ -14,3 +14,4 @@ Tracked progress and implementation history.
 - **[2025-12-08]** add resume model
 - **[2025-12-09]** add hero section
 - **[2025-12-09]** update hero title
+- **[2025-12-10]** configure google login
