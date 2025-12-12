@@ -16,3 +16,4 @@ Tracked progress and implementation history.
 - **[2025-12-09]** update hero title
 - **[2025-12-10]** configure google login
 - **[2025-12-11]** add github login
+- **[2025-12-12]** fix callback redirect
