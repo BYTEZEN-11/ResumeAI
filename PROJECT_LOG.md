@@ -19,3 +19,4 @@ Tracked progress and implementation history.
 - **[2025-12-12]** fix callback redirect
 - **[2025-12-13]** add dashboard layout
 - **[2025-12-14]** add details form
+- **[2025-12-14]** update input styling
