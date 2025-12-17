@@ -22,3 +22,4 @@ Tracked progress and implementation history.
 - **[2025-12-14]** update input styling
 - **[2025-12-15]** add experience section
 - **[2025-12-16]** allow dynamic items
+- **[2025-12-17]** fix list keys
