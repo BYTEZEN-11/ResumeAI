@@ -24,3 +24,4 @@ Tracked progress and implementation history.
 - **[2025-12-16]** allow dynamic items
 - **[2025-12-17]** fix list keys
 - **[2025-12-18]** add education section
+- **[2025-12-18]** add skills selector
