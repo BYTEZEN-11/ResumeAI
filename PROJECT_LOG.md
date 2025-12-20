@@ -26,3 +26,4 @@ Tracked progress and implementation history.
 - **[2025-12-18]** add education section
 - **[2025-12-18]** add skills selector
 - **[2025-12-19]** add tag animation
+- **[2025-12-20]** add project section
