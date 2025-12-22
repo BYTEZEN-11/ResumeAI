@@ -29,3 +29,4 @@ Tracked progress and implementation history.
 - **[2025-12-20]** add project section
 - **[2025-12-21]** add achievements section
 - **[2025-12-22]** add live preview
+- **[2025-12-22]** add modern template
