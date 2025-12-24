@@ -31,3 +31,4 @@ Tracked progress and implementation history.
 - **[2025-12-22]** add live preview
 - **[2025-12-22]** add modern template
 - **[2025-12-23]** add classic template
+- **[2025-12-24]** add minimalist template
