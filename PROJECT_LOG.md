@@ -35,3 +35,4 @@ Tracked progress and implementation history.
 - **[2025-12-25]** setup pdf export
 - **[2025-12-26]** fix page break
 - **[2025-12-27]** optimize pdf export
+- **[2025-12-27]** add openai client
