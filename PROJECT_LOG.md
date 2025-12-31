@@ -39,3 +39,4 @@ Tracked progress and implementation history.
 - **[2025-12-28]** add bullet enhancer
 - **[2025-12-29]** update action button
 - **[2025-12-30]** fix api errors
+- **[2025-12-31]** add match score
