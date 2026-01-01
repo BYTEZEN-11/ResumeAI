@@ -41,3 +41,4 @@ Tracked progress and implementation history.
 - **[2025-12-30]** fix api errors
 - **[2025-12-31]** add match score
 - **[2025-12-31]** add job input
+- **[2026-01-01]** add score gauge
