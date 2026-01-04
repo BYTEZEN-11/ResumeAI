@@ -44,3 +44,4 @@ Tracked progress and implementation history.
 - **[2026-01-01]** add score gauge
 - **[2026-01-02]** update dashboard grid
 - **[2026-01-03]** add search filter
+- **[2026-01-04]** add delete modal
