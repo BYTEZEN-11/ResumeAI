@@ -46,3 +46,4 @@ Tracked progress and implementation history.
 - **[2026-01-03]** add search filter
 - **[2026-01-04]** add delete modal
 - **[2026-01-04]** add clone resume
+- **[2026-01-05]** fix delete sync
