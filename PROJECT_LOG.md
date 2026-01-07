@@ -48,3 +48,4 @@ Tracked progress and implementation history.
 - **[2026-01-04]** add clone resume
 - **[2026-01-05]** fix delete sync
 - **[2026-01-06]** add json export
+- **[2026-01-07]** add json import
