@@ -49,3 +49,4 @@ Tracked progress and implementation history.
 - **[2026-01-05]** fix delete sync
 - **[2026-01-06]** add json export
 - **[2026-01-07]** add json import
+- **[2026-01-08]** fix schema validation
