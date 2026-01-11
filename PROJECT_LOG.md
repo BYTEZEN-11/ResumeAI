@@ -53,3 +53,4 @@ Tracked progress and implementation history.
 - **[2026-01-09]** add dark mode
 - **[2026-01-09]** fix dark contrast
 - **[2026-01-10]** add settings page
+- **[2026-01-11]** add avatar upload
