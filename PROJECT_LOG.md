@@ -55,3 +55,4 @@ Tracked progress and implementation history.
 - **[2026-01-10]** add settings page
 - **[2026-01-11]** add avatar upload
 - **[2026-01-12]** fix avatar sync
+- **[2026-01-13]** setup stripe checkout
