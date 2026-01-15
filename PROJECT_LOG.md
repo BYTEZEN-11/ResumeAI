@@ -58,3 +58,4 @@ Tracked progress and implementation history.
 - **[2026-01-13]** setup stripe checkout
 - **[2026-01-13]** add pricing cards
 - **[2026-01-14]** fix webhook validation
+- **[2026-01-15]** add subscription manager
