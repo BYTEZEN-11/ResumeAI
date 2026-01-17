@@ -61,3 +61,4 @@ Tracked progress and implementation history.
 - **[2026-01-15]** add subscription manager
 - **[2026-01-16]** update api docs
 - **[2026-01-17]** clean legacy code
+- **[2026-01-17]** add toast notifications
