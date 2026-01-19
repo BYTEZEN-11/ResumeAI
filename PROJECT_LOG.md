@@ -63,3 +63,4 @@ Tracked progress and implementation history.
 - **[2026-01-17]** clean legacy code
 - **[2026-01-17]** add toast notifications
 - **[2026-01-18]** fix layer order
+- **[2026-01-19]** add drag reorder
