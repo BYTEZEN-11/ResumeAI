@@ -65,3 +65,4 @@ Tracked progress and implementation history.
 - **[2026-01-18]** fix layer order
 - **[2026-01-19]** add drag reorder
 - **[2026-01-20]** update drop shadow
+- **[2026-01-21]** fix mobile index
