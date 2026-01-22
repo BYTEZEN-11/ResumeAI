@@ -67,3 +67,4 @@ Tracked progress and implementation history.
 - **[2026-01-20]** update drop shadow
 - **[2026-01-21]** fix mobile index
 - **[2026-01-22]** add custom sections
+- **[2026-01-22]** add language selector
