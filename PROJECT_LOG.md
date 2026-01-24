@@ -69,3 +69,4 @@ Tracked progress and implementation history.
 - **[2026-01-22]** add custom sections
 - **[2026-01-22]** add language selector
 - **[2026-01-23]** fix date format
+- **[2026-01-24]** add zoom controls
