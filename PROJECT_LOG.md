@@ -73,3 +73,4 @@ Tracked progress and implementation history.
 - **[2026-01-25]** update floating bar
 - **[2026-01-26]** add page format
 - **[2026-01-26]** fix letter margins
+- **[2026-01-27]** add cover letter
