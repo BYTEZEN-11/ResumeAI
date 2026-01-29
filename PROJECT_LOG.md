@@ -75,3 +75,4 @@ Tracked progress and implementation history.
 - **[2026-01-26]** fix letter margins
 - **[2026-01-27]** add cover letter
 - **[2026-01-28]** add letter editor
+- **[2026-01-29]** update letter preview
