@@ -77,3 +77,4 @@ Tracked progress and implementation history.
 - **[2026-01-28]** add letter editor
 - **[2026-01-29]** update letter preview
 - **[2026-01-30]** preserve paragraph spacing
+- **[2026-01-31]** add interview prep
