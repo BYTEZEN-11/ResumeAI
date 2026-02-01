@@ -79,3 +79,4 @@ Tracked progress and implementation history.
 - **[2026-01-30]** preserve paragraph spacing
 - **[2026-01-31]** add interview prep
 - **[2026-01-31]** add study cards
+- **[2026-02-01]** setup event tracking
