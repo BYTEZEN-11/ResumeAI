@@ -81,3 +81,4 @@ Tracked progress and implementation history.
 - **[2026-01-31]** add study cards
 - **[2026-02-01]** setup event tracking
 - **[2026-02-02]** disable dev tracking
+- **[2026-02-03]** add opengraph images
