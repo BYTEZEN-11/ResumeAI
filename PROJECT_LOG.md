@@ -83,3 +83,4 @@ Tracked progress and implementation history.
 - **[2026-02-02]** disable dev tracking
 - **[2026-02-03]** add opengraph images
 - **[2026-02-04]** configure sitemap xml
+- **[2026-02-04]** add bundle analyzer
