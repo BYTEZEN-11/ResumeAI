@@ -85,3 +85,4 @@ Tracked progress and implementation history.
 - **[2026-02-04]** configure sitemap xml
 - **[2026-02-04]** add bundle analyzer
 - **[2026-02-05]** update next images
+- **[2026-02-06]** optimize database queries
