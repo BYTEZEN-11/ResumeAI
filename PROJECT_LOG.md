@@ -88,3 +88,4 @@ Tracked progress and implementation history.
 - **[2026-02-06]** optimize database queries
 - **[2026-02-07]** add migration file
 - **[2026-02-08]** fix connection pool
+- **[2026-02-08]** add magic link
