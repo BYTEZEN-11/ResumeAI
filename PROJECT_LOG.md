@@ -90,3 +90,4 @@ Tracked progress and implementation history.
 - **[2026-02-08]** fix connection pool
 - **[2026-02-08]** add magic link
 - **[2026-02-09]** fix token expiration
+- **[2026-02-10]** add custom 404
