@@ -92,3 +92,4 @@ Tracked progress and implementation history.
 - **[2026-02-09]** fix token expiration
 - **[2026-02-10]** add custom 404
 - **[2026-02-11]** add error boundary
+- **[2026-02-12]** update typography scale
