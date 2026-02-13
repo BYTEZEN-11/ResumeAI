@@ -94,3 +94,4 @@ Tracked progress and implementation history.
 - **[2026-02-11]** add error boundary
 - **[2026-02-12]** update typography scale
 - **[2026-02-13]** add font picker
+- **[2026-02-13]** import google fonts
