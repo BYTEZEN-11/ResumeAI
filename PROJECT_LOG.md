@@ -95,3 +95,4 @@ Tracked progress and implementation history.
 - **[2026-02-12]** update typography scale
 - **[2026-02-13]** add font picker
 - **[2026-02-13]** import google fonts
+- **[2026-02-14]** fix font flash
