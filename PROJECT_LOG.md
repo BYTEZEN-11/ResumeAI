@@ -97,3 +97,4 @@ Tracked progress and implementation history.
 - **[2026-02-13]** import google fonts
 - **[2026-02-14]** fix font flash
 - **[2026-02-15]** add spacing sliders
+- **[2026-02-16]** update slider tooltips
