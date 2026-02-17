@@ -99,3 +99,4 @@ Tracked progress and implementation history.
 - **[2026-02-15]** add spacing sliders
 - **[2026-02-16]** update slider tooltips
 - **[2026-02-17]** add color picker
+- **[2026-02-17]** add tech template
