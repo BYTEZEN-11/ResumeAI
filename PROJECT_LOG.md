@@ -101,3 +101,4 @@ Tracked progress and implementation history.
 - **[2026-02-17]** add color picker
 - **[2026-02-17]** add tech template
 - **[2026-02-18]** add executive template
+- **[2026-02-19]** add creative template
