@@ -103,3 +103,4 @@ Tracked progress and implementation history.
 - **[2026-02-18]** add executive template
 - **[2026-02-19]** add creative template
 - **[2026-02-20]** add academic template
+- **[2026-02-21]** fix grid alignment
