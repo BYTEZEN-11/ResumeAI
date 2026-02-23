@@ -106,3 +106,4 @@ Tracked progress and implementation history.
 - **[2026-02-21]** fix grid alignment
 - **[2026-02-21]** add summary generator
 - **[2026-02-22]** sanitize user input
+- **[2026-02-23]** add public links
