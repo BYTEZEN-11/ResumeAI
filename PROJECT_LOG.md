@@ -108,3 +108,4 @@ Tracked progress and implementation history.
 - **[2026-02-22]** sanitize user input
 - **[2026-02-23]** add public links
 - **[2026-02-24]** add password protection
+- **[2026-02-25]** hide draft resumes
