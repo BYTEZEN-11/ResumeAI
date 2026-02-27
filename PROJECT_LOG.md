@@ -111,3 +111,4 @@ Tracked progress and implementation history.
 - **[2026-02-25]** hide draft resumes
 - **[2026-02-26]** track view counts
 - **[2026-02-26]** update public header
+- **[2026-02-27]** add auto save
