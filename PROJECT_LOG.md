@@ -113,3 +113,4 @@ Tracked progress and implementation history.
 - **[2026-02-26]** update public header
 - **[2026-02-27]** add auto save
 - **[2026-02-28]** throttle save api
+- **[2026-03-01]** add saving indicator
