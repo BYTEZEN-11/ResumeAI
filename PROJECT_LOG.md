@@ -118,3 +118,4 @@ Tracked progress and implementation history.
 - **[2026-03-02]** restore state snapshot
 - **[2026-03-03]** fix diff highlights
 - **[2026-03-04]** add action verbs
+- **[2026-03-05]** add cheat sheet
