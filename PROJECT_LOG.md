@@ -120,3 +120,4 @@ Tracked progress and implementation history.
 - **[2026-03-04]** add action verbs
 - **[2026-03-05]** add cheat sheet
 - **[2026-03-06]** update transition animation
+- **[2026-03-06]** add skill rating
