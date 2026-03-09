@@ -123,3 +123,4 @@ Tracked progress and implementation history.
 - **[2026-03-06]** add skill rating
 - **[2026-03-07]** render rating dots
 - **[2026-03-08]** add bullet styles
+- **[2026-03-09]** add keyboard shortcuts
