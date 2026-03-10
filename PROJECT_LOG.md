@@ -124,3 +124,4 @@ Tracked progress and implementation history.
 - **[2026-03-07]** render rating dots
 - **[2026-03-08]** add bullet styles
 - **[2026-03-09]** add keyboard shortcuts
+- **[2026-03-10]** add shortcuts modal
