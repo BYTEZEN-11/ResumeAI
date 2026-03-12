@@ -127,3 +127,4 @@ Tracked progress and implementation history.
 - **[2026-03-10]** add shortcuts modal
 - **[2026-03-11]** fix input shortcuts
 - **[2026-03-11]** add rest api
+- **[2026-03-12]** add api keys
