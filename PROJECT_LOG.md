@@ -133,3 +133,4 @@ Tracked progress and implementation history.
 - **[2026-03-15]** add mobile drawer
 - **[2026-03-15]** fix drawer close
 - **[2026-03-16]** update touch targets
+- **[2026-03-17]** add spellcheck warnings
