@@ -136,3 +136,4 @@ Tracked progress and implementation history.
 - **[2026-03-17]** add spellcheck warnings
 - **[2026-03-18]** update tech terms
 - **[2026-03-19]** suggest metrics data
+- **[2026-03-19]** highlight missing impact
