@@ -138,3 +138,4 @@ Tracked progress and implementation history.
 - **[2026-03-19]** suggest metrics data
 - **[2026-03-19]** highlight missing impact
 - **[2026-03-20]** export txt file
+- **[2026-03-21]** export markdown file
