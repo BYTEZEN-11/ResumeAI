@@ -139,3 +139,4 @@ Tracked progress and implementation history.
 - **[2026-03-19]** highlight missing impact
 - **[2026-03-20]** export txt file
 - **[2026-03-21]** export markdown file
+- **[2026-03-22]** fix markdown headers
