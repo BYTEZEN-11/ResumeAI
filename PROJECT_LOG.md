@@ -144,3 +144,4 @@ Tracked progress and implementation history.
 - **[2026-03-24]** add editor tooltips
 - **[2026-03-24]** update tooltip delay
 - **[2026-03-25]** add review score
+- **[2026-03-26]** generate recommendation report
