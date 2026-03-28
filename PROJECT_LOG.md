@@ -147,3 +147,4 @@ Tracked progress and implementation history.
 - **[2026-03-26]** generate recommendation report
 - **[2026-03-27]** update badge colors
 - **[2026-03-28]** fix score algorithm
+- **[2026-03-28]** add compact template
