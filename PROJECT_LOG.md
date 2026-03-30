@@ -149,3 +149,4 @@ Tracked progress and implementation history.
 - **[2026-03-28]** fix score algorithm
 - **[2026-03-28]** add compact template
 - **[2026-03-29]** add clean template
+- **[2026-03-30]** fix sidebar overflow
