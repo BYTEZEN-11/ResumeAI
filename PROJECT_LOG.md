@@ -152,3 +152,4 @@ Tracked progress and implementation history.
 - **[2026-03-30]** fix sidebar overflow
 - **[2026-03-31]** add icon picker
 - **[2026-04-01]** add project links
+- **[2026-04-02]** update link target
