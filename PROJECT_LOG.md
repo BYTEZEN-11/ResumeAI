@@ -156,3 +156,4 @@ Tracked progress and implementation history.
 - **[2026-04-02]** add page numbers
 - **[2026-04-03]** fix print headers
 - **[2026-04-04]** add mfa authentication
+- **[2026-04-05]** fix qr code
