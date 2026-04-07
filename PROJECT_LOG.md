@@ -159,3 +159,4 @@ Tracked progress and implementation history.
 - **[2026-04-05]** fix qr code
 - **[2026-04-06]** add delete account
 - **[2026-04-06]** cascade delete data
+- **[2026-04-07]** add batch export
