@@ -162,3 +162,4 @@ Tracked progress and implementation history.
 - **[2026-04-07]** add batch export
 - **[2026-04-08]** add duplicate resume
 - **[2026-04-09]** update empty dashboard
+- **[2026-04-10]** add feedback modal
