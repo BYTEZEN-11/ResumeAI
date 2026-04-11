@@ -164,3 +164,4 @@ Tracked progress and implementation history.
 - **[2026-04-09]** update empty dashboard
 - **[2026-04-10]** add feedback modal
 - **[2026-04-10]** send slack webhook
+- **[2026-04-11]** fix webhook retries
