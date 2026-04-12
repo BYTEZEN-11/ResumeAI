@@ -165,3 +165,4 @@ Tracked progress and implementation history.
 - **[2026-04-10]** add feedback modal
 - **[2026-04-10]** send slack webhook
 - **[2026-04-11]** fix webhook retries
+- **[2026-04-12]** track template picks
