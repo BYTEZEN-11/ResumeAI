@@ -167,3 +167,4 @@ Tracked progress and implementation history.
 - **[2026-04-11]** fix webhook retries
 - **[2026-04-12]** track template picks
 - **[2026-04-13]** track feature usage
+- **[2026-04-14]** enable actions cache
