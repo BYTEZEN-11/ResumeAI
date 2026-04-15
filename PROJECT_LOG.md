@@ -168,3 +168,4 @@ Tracked progress and implementation history.
 - **[2026-04-12]** track template picks
 - **[2026-04-13]** track feature usage
 - **[2026-04-14]** enable actions cache
+- **[2026-04-15]** lazy load preview
