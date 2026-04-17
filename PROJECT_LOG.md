@@ -171,3 +171,4 @@ Tracked progress and implementation history.
 - **[2026-04-15]** lazy load preview
 - **[2026-04-15]** migrate to zustand
 - **[2026-04-16]** fix state hydration
+- **[2026-04-17]** extract modal component
