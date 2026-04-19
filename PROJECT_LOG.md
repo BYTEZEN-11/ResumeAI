@@ -174,3 +174,4 @@ Tracked progress and implementation history.
 - **[2026-04-17]** extract modal component
 - **[2026-04-18]** simplify form wrapper
 - **[2026-04-19]** add transform tests
+- **[2026-04-19]** add score tests
