@@ -178,3 +178,4 @@ Tracked progress and implementation history.
 - **[2026-04-20]** test preview render
 - **[2026-04-21]** setup playwright test
 - **[2026-04-22]** add e2e test
+- **[2026-04-23]** test export download
