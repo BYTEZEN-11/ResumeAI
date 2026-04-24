@@ -180,3 +180,4 @@ Tracked progress and implementation history.
 - **[2026-04-22]** add e2e test
 - **[2026-04-23]** test export download
 - **[2026-04-23]** fix test flakiness
+- **[2026-04-24]** setup github ci
