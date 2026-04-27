@@ -183,3 +183,4 @@ Tracked progress and implementation history.
 - **[2026-04-24]** setup github ci
 - **[2026-04-25]** add vercel previews
 - **[2026-04-26]** fix env injection
+- **[2026-04-27]** add tech style
