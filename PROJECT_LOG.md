@@ -185,3 +185,4 @@ Tracked progress and implementation history.
 - **[2026-04-26]** fix env injection
 - **[2026-04-27]** add tech style
 - **[2026-04-28]** add graphic layout
+- **[2026-04-28]** adjust line height
