@@ -189,3 +189,4 @@ Tracked progress and implementation history.
 - **[2026-04-29]** align bullet points
 - **[2026-04-30]** add industry prompts
 - **[2026-05-01]** add engineer prompt
+- **[2026-05-02]** add manager prompt
