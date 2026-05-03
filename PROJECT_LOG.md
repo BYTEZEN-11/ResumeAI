@@ -191,3 +191,4 @@ Tracked progress and implementation history.
 - **[2026-05-01]** add engineer prompt
 - **[2026-05-02]** add manager prompt
 - **[2026-05-02]** add analyst prompt
+- **[2026-05-03]** add marketing prompt
