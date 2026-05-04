@@ -192,3 +192,4 @@ Tracked progress and implementation history.
 - **[2026-05-02]** add manager prompt
 - **[2026-05-02]** add analyst prompt
 - **[2026-05-03]** add marketing prompt
+- **[2026-05-04]** fix prompt injection
