@@ -197,3 +197,4 @@ Tracked progress and implementation history.
 - **[2026-05-06]** add section dividers
 - **[2026-05-06]** update gradient lines
 - **[2026-05-07]** support date formats
+- **[2026-05-08]** fix present date
