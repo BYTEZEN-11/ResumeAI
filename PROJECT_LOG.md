@@ -200,3 +200,4 @@ Tracked progress and implementation history.
 - **[2026-05-08]** fix present date
 - **[2026-05-09]** add undo redo
 - **[2026-05-10]** add editor shortcuts
+- **[2026-05-11]** limit undo stack
