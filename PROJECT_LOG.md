@@ -203,3 +203,4 @@ Tracked progress and implementation history.
 - **[2026-05-11]** limit undo stack
 - **[2026-05-11]** add tag filtering
 - **[2026-05-12]** add bookmark star
+- **[2026-05-13]** update star transition
