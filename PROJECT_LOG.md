@@ -208,3 +208,4 @@ Tracked progress and implementation history.
 - **[2026-05-15]** fix docx padding
 - **[2026-05-15]** add analytics summary
 - **[2026-05-16]** mask visitor ips
+- **[2026-05-17]** add coupon field
