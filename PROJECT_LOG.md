@@ -211,3 +211,4 @@ Tracked progress and implementation history.
 - **[2026-05-17]** add coupon field
 - **[2026-05-18]** calculate plan upgrades
 - **[2026-05-19]** add notification settings
+- **[2026-05-19]** add system theme
