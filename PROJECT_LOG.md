@@ -215,3 +215,4 @@ Tracked progress and implementation history.
 - **[2026-05-20]** add info popovers
 - **[2026-05-21]** update popover shadow
 - **[2026-05-22]** add references section
+- **[2026-05-23]** support section titles
