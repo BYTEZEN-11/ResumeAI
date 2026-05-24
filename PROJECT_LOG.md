@@ -217,3 +217,4 @@ Tracked progress and implementation history.
 - **[2026-05-22]** add references section
 - **[2026-05-23]** support section titles
 - **[2026-05-24]** update title fallback
+- **[2026-05-24]** export png image
