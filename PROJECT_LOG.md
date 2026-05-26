@@ -219,3 +219,4 @@ Tracked progress and implementation history.
 - **[2026-05-24]** update title fallback
 - **[2026-05-24]** export png image
 - **[2026-05-25]** fix canvas resolution
+- **[2026-05-26]** remove unused packages
