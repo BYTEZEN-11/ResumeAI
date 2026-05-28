@@ -221,3 +221,4 @@ Tracked progress and implementation history.
 - **[2026-05-25]** fix canvas resolution
 - **[2026-05-26]** remove unused packages
 - **[2026-05-27]** self host fonts
+- **[2026-05-28]** refactor api routes
