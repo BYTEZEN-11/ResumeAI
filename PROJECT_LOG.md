@@ -225,3 +225,4 @@ Tracked progress and implementation history.
 - **[2026-05-28]** update types definitions
 - **[2026-05-29]** fix type warnings
 - **[2026-05-30]** add skeleton loader
+- **[2026-05-31]** update shimmer effect
