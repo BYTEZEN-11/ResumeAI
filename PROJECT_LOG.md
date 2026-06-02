@@ -228,3 +228,4 @@ Tracked progress and implementation history.
 - **[2026-05-31]** update shimmer effect
 - **[2026-06-01]** add keyword highlight
 - **[2026-06-02]** update highlight color
+- **[2026-06-02]** suggest job bullets
