@@ -230,3 +230,4 @@ Tracked progress and implementation history.
 - **[2026-06-02]** update highlight color
 - **[2026-06-02]** suggest job bullets
 - **[2026-06-03]** clean ai text
+- **[2026-06-04]** add modern layout
