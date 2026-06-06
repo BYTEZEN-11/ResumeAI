@@ -233,3 +233,4 @@ Tracked progress and implementation history.
 - **[2026-06-04]** add modern layout
 - **[2026-06-05]** add executive layout
 - **[2026-06-06]** update sidebar width
+- **[2026-06-06]** fix page breaks
