@@ -237,3 +237,4 @@ Tracked progress and implementation history.
 - **[2026-06-07]** add languages section
 - **[2026-06-08]** update proficiency pills
 - **[2026-06-09]** add gallery section
+- **[2026-06-10]** allow image uploads
