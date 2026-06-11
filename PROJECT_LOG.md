@@ -239,3 +239,4 @@ Tracked progress and implementation history.
 - **[2026-06-09]** add gallery section
 - **[2026-06-10]** allow image uploads
 - **[2026-06-10]** optimize image upload
+- **[2026-06-11]** add timeout warning
