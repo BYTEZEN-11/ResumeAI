@@ -241,3 +241,4 @@ Tracked progress and implementation history.
 - **[2026-06-10]** optimize image upload
 - **[2026-06-11]** add timeout warning
 - **[2026-06-12]** refresh user token
+- **[2026-06-13]** add top banner
