@@ -244,3 +244,4 @@ Tracked progress and implementation history.
 - **[2026-06-13]** add top banner
 - **[2026-06-14]** update banner dismiss
 - **[2026-06-15]** add download counter
+- **[2026-06-15]** fix view count
