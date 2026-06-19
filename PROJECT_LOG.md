@@ -248,3 +248,4 @@ Tracked progress and implementation history.
 - **[2026-06-16]** add list view
 - **[2026-06-17]** update dashboard rows
 - **[2026-06-18]** generate cover letter
+- **[2026-06-19]** link job title
