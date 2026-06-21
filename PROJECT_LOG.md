@@ -251,3 +251,4 @@ Tracked progress and implementation history.
 - **[2026-06-19]** link job title
 - **[2026-06-19]** export zip archive
 - **[2026-06-20]** fix name collisions
+- **[2026-06-21]** add invoice table
