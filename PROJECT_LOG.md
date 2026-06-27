@@ -258,3 +258,4 @@ Tracked progress and implementation history.
 - **[2026-06-24]** require current password
 - **[2026-06-25]** add breadcrumbs bar
 - **[2026-06-26]** update link states
+- **[2026-06-27]** allow hidden sections
