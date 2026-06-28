@@ -260,3 +260,4 @@ Tracked progress and implementation history.
 - **[2026-06-26]** update link states
 - **[2026-06-27]** allow hidden sections
 - **[2026-06-28]** update section toggle
+- **[2026-06-28]** exclude hidden sections
