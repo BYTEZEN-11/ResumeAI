@@ -263,3 +263,4 @@ Tracked progress and implementation history.
 - **[2026-06-28]** exclude hidden sections
 - **[2026-06-29]** add custom paper
 - **[2026-06-30]** scale page layout
+- **[2026-07-01]** suggest summary lines
