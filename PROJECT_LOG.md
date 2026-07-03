@@ -266,3 +266,4 @@ Tracked progress and implementation history.
 - **[2026-07-01]** suggest summary lines
 - **[2026-07-02]** limit word count
 - **[2026-07-02]** add serif template
+- **[2026-07-03]** add split template
