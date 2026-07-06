@@ -269,3 +269,4 @@ Tracked progress and implementation history.
 - **[2026-07-03]** add split template
 - **[2026-07-04]** balance template layout
 - **[2026-07-05]** align date ranges
+- **[2026-07-06]** add publications section
