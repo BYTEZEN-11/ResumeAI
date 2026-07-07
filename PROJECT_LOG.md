@@ -271,3 +271,4 @@ Tracked progress and implementation history.
 - **[2026-07-05]** align date ranges
 - **[2026-07-06]** add publications section
 - **[2026-07-06]** add volunteer section
+- **[2026-07-07]** update entry styling
