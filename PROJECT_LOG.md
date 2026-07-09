@@ -273,3 +273,4 @@ Tracked progress and implementation history.
 - **[2026-07-06]** add volunteer section
 - **[2026-07-07]** update entry styling
 - **[2026-07-08]** add header search
+- **[2026-07-09]** fix key navigation
