@@ -275,3 +275,4 @@ Tracked progress and implementation history.
 - **[2026-07-08]** add header search
 - **[2026-07-09]** fix key navigation
 - **[2026-07-10]** track build time
+- **[2026-07-11]** filter bot traffic
