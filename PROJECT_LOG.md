@@ -277,3 +277,4 @@ Tracked progress and implementation history.
 - **[2026-07-10]** track build time
 - **[2026-07-11]** filter bot traffic
 - **[2026-07-11]** add database index
+- **[2026-07-12]** optimize edge runtime
