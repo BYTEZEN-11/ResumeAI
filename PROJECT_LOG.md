@@ -281,3 +281,4 @@ Tracked progress and implementation history.
 - **[2026-07-13]** fix match regex
 - **[2026-07-14]** add custom slug
 - **[2026-07-15]** validate slug uniqueness
+- **[2026-07-15]** analyze resume ats
