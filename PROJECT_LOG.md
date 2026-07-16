@@ -282,3 +282,4 @@ Tracked progress and implementation history.
 - **[2026-07-14]** add custom slug
 - **[2026-07-15]** validate slug uniqueness
 - **[2026-07-15]** analyze resume ats
+- **[2026-07-16]** generate ats report
