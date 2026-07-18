@@ -284,3 +284,4 @@ Tracked progress and implementation history.
 - **[2026-07-15]** analyze resume ats
 - **[2026-07-16]** generate ats report
 - **[2026-07-17]** add progress ring
+- **[2026-07-18]** fix font readability
