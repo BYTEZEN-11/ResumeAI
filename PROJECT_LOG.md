@@ -285,3 +285,4 @@ Tracked progress and implementation history.
 - **[2026-07-16]** generate ats report
 - **[2026-07-17]** add progress ring
 - **[2026-07-18]** fix font readability
+- **[2026-07-19]** add bullet selector
