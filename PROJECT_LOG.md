@@ -287,3 +287,4 @@ Tracked progress and implementation history.
 - **[2026-07-18]** fix font readability
 - **[2026-07-19]** add bullet selector
 - **[2026-07-19]** support rich text
+- **[2026-07-20]** preserve text focus
