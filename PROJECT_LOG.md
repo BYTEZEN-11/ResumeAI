@@ -289,3 +289,4 @@ Tracked progress and implementation history.
 - **[2026-07-19]** support rich text
 - **[2026-07-20]** preserve text focus
 - **[2026-07-21]** add leave warning
+- **[2026-07-22]** update alert design
