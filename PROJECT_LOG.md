@@ -290,3 +290,4 @@ Tracked progress and implementation history.
 - **[2026-07-20]** preserve text focus
 - **[2026-07-21]** add leave warning
 - **[2026-07-22]** update alert design
+- **[2026-07-23]** export html document
