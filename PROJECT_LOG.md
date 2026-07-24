@@ -291,3 +291,4 @@ Tracked progress and implementation history.
 - **[2026-07-21]** add leave warning
 - **[2026-07-22]** update alert design
 - **[2026-07-23]** export html document
+- **[2026-07-24]** inline html styles
