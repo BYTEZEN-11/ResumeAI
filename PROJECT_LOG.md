@@ -295,3 +295,4 @@ Tracked progress and implementation history.
 - **[2026-07-24]** sort by date
 - **[2026-07-25]** sort by name
 - **[2026-07-26]** save sort preference
+- **[2026-07-27]** add architect template
