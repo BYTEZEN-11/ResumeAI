@@ -297,3 +297,4 @@ Tracked progress and implementation history.
 - **[2026-07-26]** save sort preference
 - **[2026-07-27]** add architect template
 - **[2026-07-28]** add founder template
+- **[2026-07-28]** update section padding
