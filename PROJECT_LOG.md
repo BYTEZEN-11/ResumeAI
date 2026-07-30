@@ -299,3 +299,4 @@ Tracked progress and implementation history.
 - **[2026-07-28]** add founder template
 - **[2026-07-28]** update section padding
 - **[2026-07-29]** fix title wrap
+- **[2026-07-30]** generate star bullets
