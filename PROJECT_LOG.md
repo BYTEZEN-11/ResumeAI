@@ -301,3 +301,4 @@ Tracked progress and implementation history.
 - **[2026-07-29]** fix title wrap
 - **[2026-07-30]** generate star bullets
 - **[2026-07-31]** format star response
+- **[2026-08-01]** export user data
