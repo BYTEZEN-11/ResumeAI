@@ -1,123 +1,118 @@
-# ResumeRank AI
+# Resume AI Pro
 
-> AI-powered resume analysis, ATS scoring, and career optimization platform.
+> AI-powered resume builder, ATS score optimization, real-time keyword matching, and professional career tools.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC)](https://tailwindcss.com)
+[![Prisma](https://img.shields.io/badge/Prisma-6.0-2D3748)](https://prisma.io)
 
 ---
 
-## Demo
+## Overview
 
-**Live URL:** https://resume-rank-ai.vercel.app
-
-| Role  | Email                    | Password       |
-|-------|--------------------------|----------------|
-| Admin | admin@resumerank.ai      | Admin@123456   |
-| Demo  | demo@resumerank.ai       | Demo@123456    |
+**Resume AI Pro** is a modern full-stack web application designed to help job seekers generate, optimize, and export high-converting resumes tailored to specific job postings. Powered by Next.js 15, Auth.js, Prisma, and OpenAI, it provides real-time ATS keyword analysis, section-by-section AI content rewriting, multi-template rendering, and high-resolution PDF exports.
 
 ---
 
-## Features
+## Key Features
 
-- **ATS Score** — Detailed breakdown across keywords, formatting, sections, readability
-- **Skill Gap Detection** — Critical, important, and nice-to-have missing skills
-- **AI Resume Rewrites** — Section-level rewrites with stronger action verbs and metrics
-- **Interview Questions** — Behavioral, technical, situational questions tailored to the role
-- **Career Recommendations** — AI-driven career path guidance
-- **Resume History** — Full analysis history with search, filter, and pagination
-- **Dashboard Analytics** — Score trends, top missing skills, recent activity
-- **Subscription Plans** — Free, Pro ($19/mo), Team ($49/mo) via Stripe
-- **Admin Panel** — User management, platform analytics, feature flags, audit logs
-- **Dark Mode** — Full dark/light theme support
-- **Responsive** — Mobile-first design
+- **ATS Scoring Engine** — Instant scoring breakdown analyzing keyword alignment, section formatting, readability, and impact metrics.
+- **AI Content Enhancer** — Transform weak bullet points into high-impact, action-oriented achievements with quantifiable results.
+- **Live Resume Preview** — Real-time rendering with interactive layout customization, font selection, line spacing, and theme colors.
+- **Multiple Modern Templates** — Professionally designed templates optimized for technical, corporate, creative, and academic roles.
+- **Target Job Matcher** — Compare your resume directly against target job descriptions to discover missing critical skills.
+- **Cover Letter & Interview Generator** — Automatically generate matching cover letters and tailored behavioral interview questions.
+- **Export Options** — Instant exports to clean PDF, Markdown, JSON backup, or raw text format.
+- **User Dashboard** — Manage multiple resume variations, track view analytics, duplicate drafts, and organize with custom tags.
+- **Subscription Tier Ready** — Integrated Stripe checkout and subscription management architecture.
+- **Dark Mode Support** — Seamless light and dark mode design system across all application pages.
 
 ---
 
 ## Tech Stack
 
-| Layer         | Technology                          |
-|---------------|-------------------------------------|
-| Frontend      | Next.js 15, React 19, TypeScript    |
-| Styling       | Tailwind CSS, shadcn/ui, Framer Motion |
-| Auth          | Auth.js v5 (credentials + OAuth)    |
-| Database      | PostgreSQL via Supabase + Prisma    |
-| Storage       | Supabase Storage                    |
-| AI            | OpenAI GPT-4o-mini / GPT-4o         |
-| Background    | Inngest                             |
-| Email         | Resend                              |
-| Payments      | Stripe                              |
-| Deployment    | Vercel                              |
+| Layer | Technology |
+|---|---|
+| **Framework** | Next.js 15 (App Router), React 19 |
+| **Language** | TypeScript 5 |
+| **Styling** | Vanilla CSS, Tailwind CSS, Framer Motion, Radix UI |
+| **Authentication** | Auth.js v5 (OAuth & Credentials) |
+| **Database** | PostgreSQL via Supabase & Prisma ORM |
+| **AI Integration** | OpenAI API (GPT-4o / GPT-4o-mini) |
+| **Background Tasks** | Inngest |
+| **Email Service** | Resend |
+| **Payment Gateway** | Stripe Checkout & Webhooks |
+| **Deployment** | Vercel |
 
 ---
 
 ## Getting Started
 
-### 1. Clone
+### Prerequisites
 
-```bash
-git clone https://github.com/yourname/resume-rank-ai.git
-cd resume-rank-ai
-```
+- **Node.js**: v18.17 or higher
+- **npm**: v9 or higher
+- **PostgreSQL**: Local instance or Supabase cloud database
 
-### 2. Install dependencies
+### Installation & Setup
 
-```bash
-npm install
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/BYTEZEN-11/ResumeAI.git
+   cd ResumeAI
+   ```
 
-### 3. Configure environment
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-```bash
-cp .env.example .env.local
-```
+3. **Configure environment variables**:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Fill in your local environment keys in `.env.local`. Refer to [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md) for details.
 
-Fill in all values in `.env.local`. See [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md).
+4. **Initialize the database**:
+   ```bash
+   npm run db:migrate
+   npm run db:seed
+   ```
 
-### 4. Set up database
+5. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-npm run db:migrate
-npm run db:seed
-```
-
-### 5. Run development server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
+6. **Open in browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## Project Structure
+## Project Architecture
 
 ```
 src/
-├── app/                    # Next.js App Router
-│   ├── (app)/              # Authenticated pages
-│   ├── (auth)/             # Auth pages
-│   ├── (marketing)/        # Public marketing pages
-│   └── api/                # API route handlers
-├── modules/                # Feature modules (domain logic)
-│   ├── auth/
-│   ├── resume/
-│   ├── analysis/
-│   ├── dashboard/
-│   ├── billing/
-│   ├── notifications/
-│   ├── admin/
-│   └── settings/
-├── shared/                 # Shared utilities and components
-│   ├── components/
-│   ├── hooks/
-│   ├── providers/
-│   └── utils/
-├── lib/                    # Third-party client setup
-├── types/                  # TypeScript type definitions
-└── constants/              # App-wide constants
+├── app/                    # Next.js App Router routes & API endpoints
+│   ├── (app)/              # Authenticated user dashboard & builder pages
+│   ├── (auth)/             # Authentication flows (login, register)
+│   ├── (marketing)/        # Landing page and marketing content
+│   └── api/                # REST API route handlers
+├── modules/                # Domain-driven feature modules
+│   ├── auth/               # Session & user provider logic
+│   ├── resume/             # Resume editor & data structures
+│   ├── analysis/           # ATS scoring & AI enhancement engine
+│   ├── dashboard/          # Analytics & document grid views
+│   ├── billing/            # Stripe subscription integrations
+│   └── settings/           # Profile & account configuration
+├── shared/                 # Reusable UI components & custom hooks
+│   ├── components/         # Shared Radix & Tailwind UI elements
+│   ├── hooks/              # Custom React hooks
+│   └── utils/              # Formatting & date helper functions
+├── lib/                    # SDK initializers (Prisma, OpenAI, Stripe)
+└── types/                  # Shared TypeScript type definitions
 ```
 
 ---
@@ -125,32 +120,29 @@ src/
 ## Available Scripts
 
 ```bash
-npm run dev           # Start development server
-npm run build         # Production build
-npm run type-check    # TypeScript type check
-npm run lint          # ESLint
-npm run test          # Run unit tests
-npm run test:coverage # Coverage report
-npm run test:e2e      # Playwright E2E tests
-npm run db:migrate    # Run database migrations
-npm run db:studio     # Open Prisma Studio
-npm run db:seed       # Seed demo data
+npm run dev           # Run development server
+npm run build         # Build production application bundle
+npm run start         # Start production build server
+npm run type-check    # Run TypeScript compiler checks
+npm run lint          # Run ESLint validation rules
+npm run test          # Execute unit tests with Vitest
+npm run test:e2e      # Execute end-to-end tests with Playwright
+npm run db:migrate    # Run Prisma database migrations
+npm run db:studio     # Open interactive Prisma Studio GUI
 ```
 
 ---
 
 ## Documentation
 
-- [Architecture](docs/ARCHITECTURE.md)
+- [Architecture Overview](docs/ARCHITECTURE.md)
 - [API Reference](docs/API.md)
 - [Database Schema](docs/DATABASE.md)
-- [Environment Variables](docs/ENVIRONMENT.md)
+- [Environment Configuration](docs/ENVIRONMENT.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
-- [Contributing](CONTRIBUTING.md)
-- [Changelog](CHANGELOG.md)
 
 ---
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
